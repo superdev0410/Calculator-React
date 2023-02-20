@@ -3,6 +3,8 @@ import Screen from "./components/Screen";
 import ButtonBox from "./components/ButtonBox";
 import Button from "./components/Button";
 
+import React, { useState } from "react";
+
 const button_values = [
   [7, 8, 9, "+"],
   [6, 5, 4, "-"],
@@ -11,6 +13,11 @@ const button_values = [
 ];
 
 function App() {
+  let [calc, setCalc] = useState({
+    num: 0,
+    res: 0
+  })
+
   return (
     <Wrapper>
       <Screen value="0" />
