@@ -19,9 +19,10 @@ function App() {
           button_values.flat().map((btn, i) => {
             return (
               <Button
-                classname="button"
-                value="btn"
-                onclick={() => {
+                key={i}
+                className="button"
+                value={btn}
+                onClick={() => {
                   console.log(`${btn} clicked`);
                 }}
               />
